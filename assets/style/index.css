@@ -39,7 +39,13 @@ header {
 
 }
 
+.header .nav {
+    position: relative;
+}
+
 .header .nav ul {
+    position: relative;
+    left: 40px;
     color: #fff;
     list-style: none;
     display: flex;
@@ -49,11 +55,18 @@ header {
     cursor: pointer;
 }
 
-ul li + li {
+.nav ul li + li {
     margin-left: 20px;
 }
 
+.user {
+    position: relative;
+}
+
 .user .photo {
+    position: relative;
+    top: 53px;
+    left: 90px;
     width: 35px;
     height: 35px;
     border-radius: 50%;
@@ -63,6 +76,34 @@ ul li + li {
 
 .user .photo:hover {
     cursor: pointer;
+}
+
+.user .info {
+    visibility: hidden;
+    color: #fff;
+    position: relative;
+    left: 10px;
+    top: 52px;
+}
+
+.user .info:hover {
+    cursor: pointer;
+}
+
+.user .info span {
+    position: relative;
+    top: 10px;
+    left: -3px;
+    width: 215px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 26px 30px -10px, rgba(0, 0, 0, 0.1) 0px 16px 10px -10px;
+
 }
 
 
@@ -83,76 +124,96 @@ main {
     align-items: center;
 }
 
-.container .title h1 {
-    font-size: 24px;
-    color: #fff;   
+.summary {
+    position: relative;
 }
 
-.container .search {
+.summary .note {
     margin-top: 20px;
 }
 
-.search input {
-    position: relative;
-    width: 400px;
-    height: 40px;
-    font-size: 16px;
+.note textarea {
+    font-size: 18px;
     color: #fff;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px 1px 0px 1px solid rgba(255, 255, 255, 0.1);
     background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 4px;
+    border-radius: 4px 4px 0px 0px;
+    resize: none;
+}
+
+.note .shop {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: -7px;
+    border: 0px 1px 1px 1px solid rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 0px 0px 4px 4px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 26px 30px -10px, rgba(0, 0, 0, 0.1) 0px 16px 10px -10px;
 }
 
-.search input::placeholder {
-    position: relative;
-    left: 5px;
+.shop .picture {
+    margin-left: 20px;
+   
 }
 
-.search button {
-    width: 100px;
-    height: 40px;
-    background-color: #33ab4e;
+.upfile,.fa-solid {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 22px;
+    height: 64px;
+    z-index: 2;
+    opacity: 0;
+}
+
+.fa-solid {
+    overflow: hidden;
+    z-index: 1;
+    color: #566184;
+    font-size: 22px;
+    opacity: 1;
+}
+
+.picture i:hover {
+    cursor: pointer;
+}
+
+.picture span {
+    font-size: 8px;
+    position: relative;
+    left: 17px;
+    color: #566184;
+}
+
+.shop .post {
+    margin-bottom: 10px;
+    margin-right: 20px;
+   
+}
+
+.post button {
     color: #fff;
-    font-size: 16px;
-    border-radius: 4px;
+    width: 60px;
+    height: 30px;
+    background-color:#3c57ff;
+    border-radius: 6px;
 }
-
-.tip {
-    position: relative;
-    left: -125px;
-    font-size: 14px;
-    color: #2d9745;
-
-}
-
-.contact {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-}
-
-.contact span {
-    font-size: 16px;
-    color: #2d9745;
-}
-
 
 .grid-container {
-    width: 900px;
-    height:350px;
-    display: inline-grid;
-    margin-top: 10px;
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    width: 530px;
+    height:800px;
 }
 
 .grid-container div{
+    width: 530px;
+    margin-top: 10px;
     cursor: pointer;
     color: #fff;
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
     font-size: 18px;
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -170,30 +231,5 @@ main {
 }
 
 
-.note {
-    margin-top: 80px;
-    font-size: 16px;
-    color: #2d9745;
-}
 
-.msg {
-    position: relative;
-    margin-top: 5px;
-    width: 270px;
-    height: 30px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 4px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 26px 30px -10px, rgba(0, 0, 0, 0.1) 0px 16px 10px -10px;
-    border-radius: 4px;
-}
-
-.msg span {
-    display: flex;
-    color: #fff;
-    font-size: 18px;
-    justify-content: center;
-    align-items: center;
-
-}
 
